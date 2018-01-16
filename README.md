@@ -270,6 +270,35 @@ curl -X GET http://localhost:8881/interactive/queries/emojis/stats/topN
 ```
 _NOTE: the numbers you get will obviously vary!_
 
+
+##### SSE change stream of emoji count updates
+
+![meme5](docs/images/meme5.png)
+
+Client applications can subscribe to a reactive change stream of emoji count updates while the kstreams applications is processing new data. This results in SSE being continuously streamed towards clients in order to consume them with your JS framework of choice and build a nice HTML dashboard.
+
+```bash
+curl -X GET http://localhost:8881/interactive/queries/emojis/updates/notify
+```
+
+```json
+
+...
+
+data: {"emoji": "🌎","count": 77}
+
+data: {"emoji": "💀","count": 29}
+
+data: {"emoji": "😂","count": 64}
+
+data: {"emoji": "👇","count": 113}
+
+data: {"emoji": "🔥","count": 17}
+
+...
+
+```
+
 #### 7 Optional: Run multiple instance of the kstreams application
 
 ![meme4](docs/images/meme4.png)

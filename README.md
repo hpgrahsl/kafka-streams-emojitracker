@@ -1,5 +1,7 @@
 # Near Real-Time Emoji Tracking
 
+![meme2](docs/images/meme2.png)
+
 ## Overview
 This repository contains a working example of how to build a modern data-centric application to track occurrences of emojis in near real-time, which are found in publicly available tweets. It uses the following main technologies:
 
@@ -9,6 +11,8 @@ This repository contains a working example of how to build a modern data-centric
 - RPC integration layer & reactive WebAPI: [Spring Boot 2.0](https://projects.spring.io/spring-boot/)
 
 You may also want to take a look at the accompanying slides of a recent talk of mine: [Building Stateful Streaming Applications Without a Database](https://speakerdeck.com/hpgrahsl/building-stateful-streaming-apps-without-a-database)
+
+![meme1](docs/images/meme1.png)
 
 ## Usage example:
 
@@ -150,6 +154,8 @@ java -jar -Dserver.port=8881 -Dkstreams.tweetsTopic=live-tweets target/kafka-str
 #### 6 Interactively query the kstreams application state stores
 After the application successfully started you can perform REST calls against it to query for current emoji counts:
 
+![meme3](docs/images/meme3.png)
+
 ##### query for all emojis tracked so far:
 
 ```bash
@@ -265,6 +271,9 @@ curl -X GET http://localhost:8881/interactive/queries/emojis/stats/topN
 _NOTE: the numbers you get will obviously vary!_
 
 #### 7 Optional: Run multiple instance of the kstreams application
+
+![meme4](docs/images/meme4.png)
+
 In case you want to run multiple instances to experiment with scalability and fault-tolerance of kstreams just launch the application multiple times. **Beware to use different _server.port_ and _live.demo.instance.id_ settings for each further instance**
 
 e.g. start a 2nd instance like so:

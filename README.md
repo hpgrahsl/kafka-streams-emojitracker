@@ -10,7 +10,7 @@ This repository contains a working example of how to build a modern data-centric
 - stream processing: [Apacha Kafka Streams](https://kafka.apache.org/documentation/streams/)
 - RPC integration layer & reactive WebAPI: [Spring Boot 2.0](https://projects.spring.io/spring-boot/)
 
-You may also want to take a look at the accompanying slides of a recent talk of mine: [Building Stateful Streaming Applications Without a Database](https://speakerdeck.com/hpgrahsl/building-stateful-streaming-apps-without-a-database)
+You may also want to take a look at the accompanying slides of a recent talk of mine: [Building Stateful Streaming Applications Without a Database](https://speakerdeck.com/hpgrahsl/stateful-and-reactive-streaming-applications-without-a-database)
 
 ![meme1](docs/images/meme1.png)
 
